@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoappui
+  namespace: anshuman
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todoappui
+  template:
+    metadata:
+      labels:
+        app: todoappui
+    spec:
+      containers:
+      - name: todoappui
+        image: devopsinsiders/todoapp-ui-new:v2
+        ports:
+        - containerPort: 80
