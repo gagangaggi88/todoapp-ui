@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: todoui
+  name: get-task
 spec:
   destination:
     name: ''
-    namespace: todoui
+    namespace: get-task
     server: 'https://kubernetes.default.svc'
   source:
     path: manifests
-    repoURL: 'https://github.com/Anshuman2121/todoapp-ui.git'
+    repoURL: 'https://github.com/gagangaggi88/todo-app-backend-get-tasks'
     targetRevision: main
   sources: []
   project: default
